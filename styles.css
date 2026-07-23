@@ -419,17 +419,6 @@ nav.top.scrolled{
 .pressrail:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
 .pressrail > *{flex:0 0 clamp(300px,27vw,376px);scroll-snap-align:start}
 .pressrail > *:last-child{margin-right:var(--gutter)}
-/* end-cap: ghost card that closes the set honestly */
-.presscard.pcap{background:none;border:1px dashed rgba(255,255,255,.22);box-shadow:none;
-  justify-content:center}
-.presscard.pcap:hover{border-color:var(--blue);transform:translateY(-6px);box-shadow:none}
-.presscard.pcap::before{display:none}
-.presscard.pcap .pcap-mark{font-family:var(--mono);font-size:20px;color:var(--blue);line-height:1;margin-bottom:22px}
-.presscard.pcap h3{color:#fff;font-size:clamp(19px,1.9vw,24px);line-height:1.2}
-.presscard.pcap p{color:rgba(255,255,255,.55)}
-.presscard.pcap .pread{color:rgba(255,255,255,.85);margin-top:0}
-.presscard.pcap .pread .arr{color:var(--blue);display:inline-block;transition:transform .3s var(--ease)}
-.presscard.pcap:hover .pread .arr{transform:translateX(4px)}
 .presscard{display:flex;flex-direction:column;background:#fff;border:1px solid transparent;
   padding:clamp(24px,2.6vw,34px);text-decoration:none;color:inherit;position:relative;
   box-shadow:0 30px 60px -30px rgba(0,0,0,.55);
@@ -438,10 +427,12 @@ nav.top.scrolled{
   transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
 .presscard:hover{transform:translateY(-6px);box-shadow:0 44px 80px -34px rgba(0,0,0,.7)}
 .presscard:hover::before{transform:scaleX(1)}
-.presscard .plogo{height:44px;display:flex;align-items:center;
+/* uniform logo well so the hairline under every masthead lines up across the rail */
+.presscard .plogo{height:62px;display:flex;align-items:center;
   padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
-.presscard .plogo img{height:100%;width:auto;max-width:92%;object-fit:contain;object-position:left center}
-.presscard .plogo.plogo-tall{height:58px}
+.presscard .plogo img{max-height:100%;max-width:100%;width:auto;height:auto;
+  object-fit:contain;object-position:left center}
+.presscard .plogo.plogo-tall img{max-height:100%}
 .presscard h3{font-size:clamp(19px,1.9vw,24px);line-height:1.22;letter-spacing:-.015em;color:var(--ink);font-weight:700;margin:0 0 12px}
 .presscard p{font-size:14.5px;line-height:1.6;color:var(--body);margin:0 0 26px}
 .presscard .pread{margin-top:auto;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
