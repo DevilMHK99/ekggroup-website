@@ -406,7 +406,30 @@ nav.top.scrolled{
 .press-band .eyebrow::before{background:var(--blue)}
 .press-band h2.title{color:#fff}
 .press-band .lead{color:rgba(255,255,255,.6)}
-.pressgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.6vw,22px);margin-top:clamp(38px,5vh,58px)}
+.presshead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.press-band .draghint.pdh{color:rgba(255,255,255,.4)}
+.press-band .draghint.pdh .dh-arr{color:var(--blue)}
+/* horizontal rail — bleeds to the right edge so the set reads as continuing */
+.pressrail{display:flex;gap:clamp(14px,1.6vw,22px);margin-top:clamp(38px,5vh,58px);
+  overflow-x:auto;overflow-y:visible;scroll-snap-type:x proximity;
+  padding:8px 0 30px;margin-right:calc(50% - 50vw);
+  cursor:grab;scrollbar-width:none;-ms-overflow-style:none}
+.pressrail::-webkit-scrollbar{display:none}
+.pressrail.grabbing{cursor:grabbing}
+.pressrail:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.pressrail > *{flex:0 0 clamp(300px,27vw,376px);scroll-snap-align:start}
+.pressrail > *:last-child{margin-right:var(--gutter)}
+/* end-cap: ghost card that closes the set honestly */
+.presscard.pcap{background:none;border:1px dashed rgba(255,255,255,.22);box-shadow:none;
+  justify-content:center}
+.presscard.pcap:hover{border-color:var(--blue);transform:translateY(-6px);box-shadow:none}
+.presscard.pcap::before{display:none}
+.presscard.pcap .pcap-mark{font-family:var(--mono);font-size:20px;color:var(--blue);line-height:1;margin-bottom:22px}
+.presscard.pcap h3{color:#fff;font-size:clamp(19px,1.9vw,24px);line-height:1.2}
+.presscard.pcap p{color:rgba(255,255,255,.55)}
+.presscard.pcap .pread{color:rgba(255,255,255,.85);margin-top:0}
+.presscard.pcap .pread .arr{color:var(--blue);display:inline-block;transition:transform .3s var(--ease)}
+.presscard.pcap:hover .pread .arr{transform:translateX(4px)}
 .presscard{display:flex;flex-direction:column;background:#fff;border:1px solid transparent;
   padding:clamp(24px,2.6vw,34px);text-decoration:none;color:inherit;position:relative;
   box-shadow:0 30px 60px -30px rgba(0,0,0,.55);
@@ -424,7 +447,7 @@ nav.top.scrolled{
 .presscard .pread{margin-top:auto;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
 .presscard .pread .arr{color:var(--blue);display:inline-block;transition:transform .3s var(--ease)}
 .presscard:hover .pread .arr{transform:translate(3px,-3px)}
-@media(max-width:900px){.pressgrid{grid-template-columns:1fr}}
+@media(max-width:900px){.presshead{display:block}.pressrail > *{flex-basis:min(82vw,320px)}}
 
 /* ============================================================
    LEADERSHIP

@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#F6F3EC">
 <link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="stylesheet" href="styles.css?v=62">
+<link rel="stylesheet" href="styles.css?v=63">
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.hero .eyebrow,.hero h1,.hero .sub,.hero .actions,.hero .ticker,.hero .hmedia{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
@@ -76,7 +76,7 @@
     <span class="mi">Center Parcs &middot; Moselle</span>
     <span class="mi">Sofitel &middot; Brussels</span>
     <span class="mi">Last-mile logistics &middot; Manhattan</span>
-    <span class="mi">Lowndes House &middot; Knightsbridge</span>
+    <span class="mi">Lowndes Square &middot; Knightsbridge</span>
     <span class="mi">Mollie&rsquo;s &middot; United Kingdom</span>
   </div>
 </div>
@@ -316,8 +316,8 @@
     <div class="psector reveal" data-sector="residential">
       <div class="shead"><h3>Residential</h3><span class="ct">Prime central London</span></div>
       <div class="pgrid" style="grid-template-columns:repeat(2,1fr);max-width:900px">
-                <article class="pcard" data-gallery="assets/portfolio/lowndes-square.jpg|assets/gallery/lowndes-drawing.jpg|assets/gallery/lowndes-dining.jpg|assets/gallery/lowndes-bed.jpg|assets/gallery/lowndes-pool.jpg"><div class="ph"><img src="assets/portfolio/lowndes-square.jpg" alt="Lowndes House, Lowndes Square"></div><div class="meta"><div class="loc">Knightsbridge, London</div><h3>Lowndes House</h3><p>Eight apartments amalgamated over ten years into a 15,000 sq ft single-family residence on Lowndes Square: ten bedrooms, garden, pool, connected to two rear mews. A joint venture with Xenia.</p><div class="type">Trophy residential</div></div></article>
-        <article class="pcard" data-gallery="assets/gallery/brechin-ext.jpg|assets/portfolio/brechin-studios.jpg|assets/gallery/brechin-living.jpg|assets/gallery/brechin-kitchen.jpg"><div class="ph"><img src="assets/portfolio/brechin-studios.jpg" alt="Brechin Studios"></div><div class="meta"><div class="loc">South Kensington, London</div><h3>Brechin Studios</h3><p>A refined residential redevelopment in prime central London, delivered to a trophy specification within the group&rsquo;s long-running European portfolio.</p><div class="type">Residential</div></div></article>
+                <article class="pcard" data-gallery="assets/portfolio/lowndes-square.jpg|assets/gallery/lowndes-drawing.jpg|assets/gallery/lowndes-dining.jpg|assets/gallery/lowndes-bed.jpg|assets/gallery/lowndes-pool.jpg"><div class="ph"><img src="assets/portfolio/lowndes-square.jpg" alt="Lowndes Square, Knightsbridge"></div><div class="meta"><div class="loc">Knightsbridge, London</div><h3>Lowndes Square</h3><p>Eight apartments amalgamated over ten years into a 15,000 sq ft single-family residence on Lowndes Square: ten bedrooms, garden, pool, connected to two rear mews. A joint venture with Xenia.</p><div class="type">Trophy residential</div></div></article>
+        <article class="pcard" data-gallery="assets/gallery/brechin-ext.jpg|assets/portfolio/brechin-studios.jpg|assets/gallery/brechin-living.jpg|assets/gallery/brechin-kitchen.jpg"><div class="ph"><img src="assets/portfolio/brechin-studios.jpg" alt="Brechin Place"></div><div class="meta"><div class="loc">South Kensington, London</div><h3>Brechin Place</h3><p>A refined residential redevelopment in prime central London, delivered to a trophy specification within the group&rsquo;s long-running European portfolio.</p><div class="type">Residential</div></div></article>
       </div>
     </div>
 
@@ -357,13 +357,16 @@
 <!-- ===================== PRESS ===================== -->
 <section id="press" class="press-band">
   <div class="wrap">
-    <div class="reveal" style="max-width:58ch">
-      <span class="eyebrow">Coverage</span>
-      <h2 class="title">In the press.</h2>
-      <hr class="accent">
-      <p class="lead">Selected coverage of the group, its principals and the current program.</p>
+    <div class="presshead reveal">
+      <div style="max-width:58ch">
+        <span class="eyebrow">Coverage</span>
+        <h2 class="title">In the press.</h2>
+        <hr class="accent">
+        <p class="lead">Selected coverage of the group, its principals and the current program.</p>
+      </div>
+      <span class="draghint pdh" aria-hidden="true">Drag <span class="dh-arr">&rarr;</span></span>
     </div>
-    <div class="pressgrid reveal d1">
+    <div class="pressrail reveal d1" id="pressrail" tabindex="0" aria-label="Press coverage. Drag or scroll horizontally.">
       <a class="presscard" href="https://therealdeal.com/new-york/tristate/2026/06/29/nyc-developer-in-hot-pursuit-of-albany-data-center/" target="_blank" rel="noopener">
         <div class="plogo"><img src="assets/brand/press/the-real-deal.svg" alt="The Real Deal" loading="lazy"></div>
         <h3>NYC developer in hot pursuit of Albany data center</h3>
@@ -381,6 +384,12 @@
         <h3>Kenwood owners propose $2.8 billion tech campus</h3>
         <p>The full-buildout vision for the group&rsquo;s master-planned campus in New York&rsquo;s Capital Region.</p>
         <span class="pread">Read the article <span class="arr">&#8599;</span></span>
+      </a>
+      <a class="presscard pcap" href="#contact">
+        <span class="pcap-mark" aria-hidden="true">+</span>
+        <h3>More coverage<br>on request.</h3>
+        <p>Media and partner enquiries are handled directly by the group.</p>
+        <span class="pread">Get in touch <span class="arr">&#8594;</span></span>
       </a>
     </div>
   </div>
@@ -495,7 +504,7 @@
   </div>
 </footer>
 
-<script src="motion.js?v=62"></script>
+<script src="motion.js?v=63"></script>
 <script>
 const nav=document.getElementById('nav');
 const onNav=()=>nav.classList.toggle('scrolled',window.scrollY>40);

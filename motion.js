@@ -18,9 +18,9 @@
     document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- filmstrip: drag-to-scroll with momentum ---------- */
-  (function strip() {
-    var s = document.getElementById('strip');
+  /* ---------- horizontal rails: drag-to-scroll with momentum ---------- */
+  ['strip', 'pressrail'].forEach(function strip(id) {
+    var s = document.getElementById(id);
     if (!s) return;
     var down = false, startX = 0, scrollStart = 0, vel = 0, lastX = 0, lastT = 0, raf;
     s.addEventListener('pointerdown', function (e) {
@@ -53,7 +53,7 @@
     s.addEventListener('wheel', function (e) {
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { e.preventDefault(); s.scrollLeft += e.deltaY; }
     }, { passive: false });
-  })();
+  });
 
   /* ---------- before/after comparator ---------- */
   (function compare() {
